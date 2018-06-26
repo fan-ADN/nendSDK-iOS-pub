@@ -29,3 +29,6 @@ FOUNDATION_EXPORT const unsigned char NendAdVersionString[];
 #import <NendAd/NADVideoError.h>
 #import <NendAd/NADUserFeature.h>
 #import <NendAd/NADLogger.h>
+#import <NendAd/NADNativeVideo.h>
+#import <NendAd/NADNativeVideoLoader.h>
+#import <NendAd/NADNativeVideoView.h>
