@@ -47,6 +47,7 @@ typedef NS_ENUM(NSInteger, NADNativeVideoClickAction) {
 
 - (instancetype _Nullable)init NS_UNAVAILABLE;
 - (void)registerInteractionViews:(nonnull NSArray<__kindof UIView *> *)views;
+- (void)unregisterInteractionViews;
 - (void)downloadLogoImageWithCompletionHandler:(void(^_Nonnull)(UIImage * _Nullable))handler;
 
 @end
