@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite, nonatomic, copy, nullable) NSString *userId;
 @property (readwrite, nonatomic, copy, nullable) NSString *mediationName;
 @property (readwrite, nonatomic, strong, nullable) NADUserFeature *userFeature;
+@property (readwrite, nonatomic) BOOL isLocationEnabled;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey;
