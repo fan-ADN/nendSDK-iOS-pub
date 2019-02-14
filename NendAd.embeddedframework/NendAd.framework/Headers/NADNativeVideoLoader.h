@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite, nonatomic, strong, nullable) NADUserFeature *userFeature;
 @property (readwrite, nonatomic) BOOL isLocationEnabled;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Null_unspecified)init NS_UNAVAILABLE;
 - (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey;
 - (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey clickAction:(NADNativeVideoClickAction)action;
 

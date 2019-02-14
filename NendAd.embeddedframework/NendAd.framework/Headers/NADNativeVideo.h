@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, NADNativeVideoClickAction) {
 @property (readonly, nonatomic, strong, nullable) UIImage *logoImage;
 @property (readonly, nonatomic, strong, nullable) NADNative *staticNativeAd;
 
-- (instancetype _Nullable)init NS_UNAVAILABLE;
+- (instancetype _Null_unspecified)init NS_UNAVAILABLE;
 - (void)registerInteractionViews:(nonnull NSArray<__kindof UIView *> *)views;
 - (void)unregisterInteractionViews;
 - (void)downloadLogoImageWithCompletionHandler:(void(^_Nonnull)(UIImage * _Nullable))handler;
