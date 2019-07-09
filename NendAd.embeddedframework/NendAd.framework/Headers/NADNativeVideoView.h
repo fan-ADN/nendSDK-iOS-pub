@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)nadNativeVideoViewDidFailToPlay:(NADNativeVideoView *)videoView;
 - (void)nadNativeVideoViewDidOpenFullScreen:(NADNativeVideoView *)videoView;
 - (void)nadNativeVideoViewDidCloseFullScreen:(NADNativeVideoView *)videoView;
+- (void)nadNativeVideoViewDidStartFullScreenPlaying:(NADNativeVideoView *)videoView;
+- (void)nadNativeVideoViewDidStopFullScreenPlaying:(NADNativeVideoView *)videoView;
 
 @end
 
