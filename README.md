@@ -16,4 +16,4 @@ iOS用nendSDKのリリースリポジトリです。
 * [sample](https://github.com/fan-ADN/nendSDK-iOS)
 
 ## License
-Copyright (C) F@N Communications, Inc.
+Copyright (C) FAN Communications, Inc.
