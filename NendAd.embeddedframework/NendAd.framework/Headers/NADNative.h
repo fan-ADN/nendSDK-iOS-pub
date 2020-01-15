@@ -2,7 +2,7 @@
 //  NADNative.h
 //  NendAd
 //
-//  Copyright (c) 2015年 F@N Communications, Inc. All rights reserved.
+//  Copyright (c) 2015年 FAN Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -24,8 +24,9 @@ typedef NS_ENUM(NSInteger, NADNativeAdvertisingExplicitly) {
 @protocol NADNativeDelegate <NSObject>
 
 @optional
+- (void)nadNativeDidImpression:(NADNative *)ad;
 - (void)nadNativeDidClickAd:(NADNative *)ad;
-
+- (void)nadNativeDidClickInformation:(NADNative *)ad;
 @end
 
 @interface NADNative : NSObject

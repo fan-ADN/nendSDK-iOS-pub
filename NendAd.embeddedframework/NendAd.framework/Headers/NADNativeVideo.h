@@ -2,7 +2,7 @@
 //  NADNativeVideo.h
 //  NendAdFramework
 //
-//  Copyright © 2018年 F@N Communications, Inc. All rights reserved.
+//  Copyright © 2018年 FAN Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

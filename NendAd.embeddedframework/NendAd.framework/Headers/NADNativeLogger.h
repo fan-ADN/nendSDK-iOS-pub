@@ -2,7 +2,7 @@
 //  NADNativeLogger.h
 //  NendAd
 //
-//  Copyright © 2015年 F@N Communications, Inc. All rights reserved.
+//  Copyright © 2015年 FAN Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
