@@ -29,6 +29,10 @@
 @property (nonatomic, weak, readwrite) id<NADInterstitialVideoDelegate> delegate;
 @property (nonatomic, copy) UIColor *fallbackFullboardBackgroundColor;
 @property (nonatomic) BOOL isMuteStartPlaying;
+#ifdef TRIAL_NEW_FEATURES
+@property (nonatomic) BOOL isSkipButtonMoveToRightBottom;
+@property (nonatomic) NSInteger fadeOutSkipButtonSecond;
+#endif//TRIAL_NEW_FEATURES
 
 - (void)addFallbackFullboardWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey;
 
