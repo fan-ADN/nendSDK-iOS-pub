@@ -46,22 +46,34 @@ typedef NS_ENUM(NSInteger, NADInterstitialShowResult) {
 /**
  A delegate object for each event of Interstitial-AD.
  */
-@protocol NADInterstitialDelegate <NSObject>
 
+@protocol NADInterstitialLoadingDelegate <NSObject>
+/**
+Notify the results of the ad load.
+*/
+- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status;
 @optional
 
-/**
- Notify the results of the ad load.
- */
-- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status;
+- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status spotID:(NSInteger)spotID;
 
-- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status spotId:(NSString *)spotId;
+@end
 
+@protocol NADInterstitialClickDelegate <NSObject>
 /**
- Notify the event of the ad click.
- */
+Notify the event of the ad click.
+*/
 - (void)didClickWithType:(NADInterstitialClickType)type;
+@optional
 
+- (void)didClickWithType:(NADInterstitialClickType)type spotID:(NSInteger)spotID;
+
+@end
+
+__deprecated_msg("This protocol is deprecated. Use NADInterstitialClickDelegate and NADInterstitialLoadingDelegate instead.")
+@protocol NADInterstitialDelegate <NADInterstitialClickDelegate, NADInterstitialLoadingDelegate>
+
+@optional
+- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status spotId:(NSString *)spotId;
 - (void)didClickWithType:(NADInterstitialClickType)type spotId:(NSString *)spotId;
 
 @end
@@ -75,6 +87,8 @@ typedef NS_ENUM(NSInteger, NADInterstitialShowResult) {
  Set the delegate object.
  */
 @property (nonatomic, weak, readwrite) id<NADInterstitialDelegate> delegate;
+@property (nonatomic, weak, readwrite) id<NADInterstitialLoadingDelegate> loadingDelegate;
+@property (nonatomic, weak, readwrite) id<NADInterstitialClickDelegate> clickDelegate;
 
 /**
  Log setting.
@@ -111,7 +125,8 @@ typedef NS_ENUM(NSInteger, NADInterstitialShowResult) {
 
  `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`
  */
-- (void)loadAdWithApiKey:(NSString *)apiKey spotId:(NSString *)spotId;
+- (void)loadAdWithApiKey:(NSString *)apiKey spotId:(NSString *)spotId __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+- (void)loadAdWithSpotID:(NSInteger)spotID apiKey:(NSString *)apiKey;
 
 ///----------------------------
 /// @name Showing / Closing AD
@@ -124,7 +139,8 @@ typedef NS_ENUM(NSInteger, NADInterstitialShowResult) {
  */
 - (NADInterstitialShowResult)showAdFromViewController:(UIViewController *)viewController;
 
-- (NADInterstitialShowResult)showAdFromViewController:(UIViewController *)viewController spotId:(NSString *)spotId;
+- (NADInterstitialShowResult)showAdFromViewController:(UIViewController *)viewController spotId:(NSString *)spotId __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+- (NADInterstitialShowResult)showAdFromViewController:(UIViewController *)viewController spotID:(NSInteger)spotID;
 
 /**
  Dismiss the Interstitial-AD.

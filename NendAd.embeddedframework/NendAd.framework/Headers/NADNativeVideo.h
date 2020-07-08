@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import "NADNative.h"
 
 @class NADNativeVideo;
@@ -49,5 +48,6 @@ typedef NS_ENUM(NSInteger, NADNativeVideoClickAction) {
 - (void)registerInteractionViews:(nonnull NSArray<__kindof UIView *> *)views;
 - (void)unregisterInteractionViews;
 - (void)downloadLogoImageWithCompletionHandler:(void(^_Nonnull)(UIImage * _Nullable))handler;
+- (void)deactivate;
 
 @end

@@ -19,10 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite, nonatomic) BOOL isLocationEnabled;
 
 - (instancetype _Null_unspecified)init NS_UNAVAILABLE;
-- (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey;
-- (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey clickAction:(NADNativeVideoClickAction)action;
+- (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+- (instancetype)initWithSpotID:(NSInteger)spotID apiKey:(NSString *)apiKey;
+- (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey clickAction:(NADNativeVideoClickAction)action __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+- (instancetype)initWithSpotID:(NSInteger)spotID apiKey:(NSString *)apiKey clickAction:(NADNativeVideoClickAction)action;
 
-- (void)setFillerStaticNativeAdId:(NSString *)spotId apiKey:(NSString *)apiKey;
+- (void)setFillerStaticNativeAdId:(NSString *)spotId apiKey:(NSString *)apiKey __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+- (void)setFillerStaticNativeAdID:(NSInteger)spotID apiKey:(NSString *)apiKey;
 - (void)loadAdWithCompletionHandler:(void(^)(NADNativeVideo * _Nullable, NSError * _Nullable))handler;
 
 @end

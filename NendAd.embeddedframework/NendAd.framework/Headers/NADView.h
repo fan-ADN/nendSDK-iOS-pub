@@ -72,7 +72,8 @@ typedef NS_ENUM(NSInteger, NADViewErrorCode) {
 - (instancetype)initWithFrame:(CGRect)frame isAdjustAdSize:(BOOL)isAdjust;
 
 #pragma mark - 広告枠のapiKeyとspotIDをセット
-- (void)setNendID:(NSString *)apiKey spotID:(NSString *)spotID;
+- (void)setNendID:(NSString *)apiKey spotID:(NSString *)spotID __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+- (void)setNendID:(NSInteger)spotID apiKey:(NSString *)apiKey;
 
 #pragma mark - 広告のロード開始
 - (void)load;
