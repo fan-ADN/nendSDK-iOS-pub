@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, NADVideoAdType) {
 #ifdef FANCS_APP
 @property (nonatomic) BOOL isMuteStartPlaying;
 @property (nonatomic, weak) id<NADVideoConsoleLogDelegate> consoleLogDelegate;
-- (void)showMraid:(NSString *)html url:(NSString *)url viewController:(UIViewController *)viewController;
+- (void)showMraid:(NSString *)html url:(NSString *)url viewController:(UIViewController *)viewController orientation:(UIInterfaceOrientation)orientation;
 #endif //FANCS_APP
 
 @end
