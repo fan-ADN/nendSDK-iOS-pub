@@ -65,7 +65,8 @@ typedef NS_ENUM(NSInteger, NADViewErrorCode) {
 @property (nonatomic, copy) NSString *nendApiKey;
 
 #pragma 広告枠ID
-@property (nonatomic, copy) NSString *nendSpotID;
+@property (nonatomic, copy) NSString *nendSpotID __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
+@property (nonatomic) NSInteger nendSpotId;
 
 #pragma mark - 広告初期化と画面幅サイズ調整有無の指定
 - (instancetype)initWithIsAdjustAdSize:(BOOL)isAdjust;
