@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite, nonatomic, copy, nullable) NSString *userId;
 @property (readwrite, nonatomic, copy, nullable) NSString *mediationName;
 @property (readwrite, nonatomic, strong, nullable) NADUserFeature *userFeature;
-@property (readwrite, nonatomic) BOOL isLocationEnabled;
+@property (readwrite, nonatomic) BOOL isLocationEnabled __deprecated_msg("This property is no longer available.");
 
 - (instancetype _Null_unspecified)init NS_UNAVAILABLE;
 - (instancetype)initWithSpotId:(NSString *)spotId apiKey:(NSString *)apiKey __deprecated_msg("This method is deprecated. Use newer one that specified spotID parameter as NSInteger.");
