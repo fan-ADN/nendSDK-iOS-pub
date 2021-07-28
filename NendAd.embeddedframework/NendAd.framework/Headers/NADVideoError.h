@@ -14,6 +14,8 @@ extern NSInteger const kNADVideoErrorCodeNetworkIsNotActive;
 extern NSInteger const kNADVideoErrorCodeFailedToRequest;
 extern NSInteger const kNADVideoErrorCodeInvalidResponseData;
 
+extern NSString *const kNADVideoErrorDescriptionInvalidResponse;
+
 @interface NADVideoError : NSError
 
 @end
