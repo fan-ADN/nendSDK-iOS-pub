@@ -51,9 +51,8 @@ typedef NS_ENUM(NSInteger, NADInterstitialShowResult) {
 /**
 Notify the results of the ad load.
 */
-- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status;
 @optional
-
+- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status;
 - (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status spotID:(NSInteger)spotID;
 
 @end
@@ -62,9 +61,8 @@ Notify the results of the ad load.
 /**
 Notify the event of the ad click.
 */
-- (void)didClickWithType:(NADInterstitialClickType)type;
 @optional
-
+- (void)didClickWithType:(NADInterstitialClickType)type;
 - (void)didClickWithType:(NADInterstitialClickType)type spotID:(NSInteger)spotID;
 
 @end
