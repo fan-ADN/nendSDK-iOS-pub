@@ -13,9 +13,9 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface NADNativeVideoLoader : NSObject
 
-@property (readwrite, nonatomic, copy, nullable) NSString *userId;
+@property (readwrite, nonatomic, copy, nullable) NSString *userId __deprecated_msg("This property is no longer available.");
 @property (readwrite, nonatomic, copy, nullable) NSString *mediationName;
-@property (readwrite, nonatomic, strong, nullable) NADUserFeature *userFeature;
+@property (readwrite, nonatomic, strong, nullable) NADUserFeature *userFeature __deprecated_msg("This property is no longer available.");
 @property (readwrite, nonatomic) BOOL isLocationEnabled __deprecated_msg("This property is no longer available.");
 
 - (instancetype _Null_unspecified)init NS_UNAVAILABLE;

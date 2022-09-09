@@ -24,8 +24,8 @@ typedef NS_ENUM(NSInteger, NADVideoAdType) {
 @interface NADVideo : NSObject
 
 @property (nonatomic, copy, nullable) NSString *mediationName;
-@property (nonatomic, copy, nullable) NSString *userId;
-@property (nonatomic) NADUserFeature *userFeature;
+@property (nonatomic, copy, nullable) NSString *userId __deprecated_msg("This property is no longer available.");
+@property (nonatomic) NADUserFeature *userFeature __deprecated_msg("This property is no longer available.");
 
 @property (nonatomic, readonly, getter=isReady) BOOL ready;
 @property (nonatomic) BOOL isLocationEnabled __deprecated_msg("This property is no longer available.");

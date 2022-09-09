@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, NADGender) {
 };
 
 NS_ASSUME_NONNULL_BEGIN
+__attribute__ ((deprecated("This class is no longer available.")))
 @interface NADUserFeature : NSObject
 
 @property (nonatomic) NADGender gender;
